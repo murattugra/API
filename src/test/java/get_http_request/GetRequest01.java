@@ -23,6 +23,10 @@ public class GetRequest01 {
         System.out.println("test zamani "+ response.time());
         int statusCode=response.statusCode();
         Assert.assertEquals(200,response.statusCode());
+        Assert.assertEquals("application/json; charset=utf-8",response.contentType());
+
+        response.then().assertThat().contentType("application/json; charset=utf-8");
+        response.then().assertThat().statusCode(200).contentType("application/json; charset=utf-8");
 
     }
 
