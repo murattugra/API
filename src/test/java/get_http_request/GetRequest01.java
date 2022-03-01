@@ -21,12 +21,14 @@ public class GetRequest01 {
         System.out.println("Status code : "+response.statusCode());
         System.out.println("ContentType  :"+response.contentType());
         System.out.println("test zamani "+ response.time());
+        System.out.println("statusLine "+response.statusLine());
         int statusCode=response.statusCode();
         Assert.assertEquals(200,response.statusCode());
         Assert.assertEquals("application/json; charset=utf-8",response.contentType());
 
         response.then().assertThat().contentType("application/json; charset=utf-8");
-        response.then().assertThat().statusCode(200).contentType("application/json; charset=utf-8");
+        response.then().assertThat().statusCode(200).contentType("application/json; charset=utf-8").statusLine("HTTP/1.1 200 OK");
+
 
     }
 
