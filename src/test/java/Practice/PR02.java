@@ -1,2 +1,4 @@
-package Practice;public class PR02 {
+package Practice;
+
+public class PR02 {
 }
