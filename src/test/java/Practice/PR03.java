@@ -25,7 +25,7 @@ ve checkout date'in 2020-09-30 oldugunu test edin
     public void pr03(){
 
         Response response=given().when().get("https://restful-booker.herokuapp.com/booking/7");
-        response.prettyPrint();
+      //  response.prettyPrint();
         response.then().assertThat().statusCode(200).contentType(ContentType.JSON)
                 .body("firstname", Matchers.equalTo("Mark")
                 ,"lastname",Matchers.equalTo("Wilson")

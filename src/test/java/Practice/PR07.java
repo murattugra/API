@@ -25,7 +25,7 @@ public class PR07 extends RegresinBaseUrl {
 
         Response response=given().spec(spec01).when().get("/{pr1}/{pr2}");
 
-        response.prettyPrint();
+    //    response.prettyPrint();
 
         //Matcher Class ile
         response.then().assertThat().body("data[4].first_name", Matchers.equalTo("Charles"));

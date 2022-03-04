@@ -22,7 +22,7 @@ ve gelen yaslar icinde 21, 61, ve 23 degerlerinden birinin oldugunu test edin.
 
         Response response=given().when().get("http://dummy.restapiexample.com/api/v1/employees");
 
-        response.prettyPrint();
+      //  response.prettyPrint();
 
         response.then().assertThat().statusCode(200).contentType("application/json")
                 .body("data", Matchers.hasSize(24)).body("data.employee_name",Matchers.hasItem("Ashton Cox"))

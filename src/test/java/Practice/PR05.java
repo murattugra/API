@@ -27,7 +27,7 @@ public class PR05 {
 
         Response response=given().when().get(url);
 
-        response.prettyPrint();
+       // response.prettyPrint();
 
         response.then().assertThat().statusCode(200)
                 .contentType(ContentType.JSON).header("Server", equalTo("cloudflare")

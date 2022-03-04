@@ -23,7 +23,7 @@ public class PR06 {
 
         Response response=given().when().get("https://restful-booker.herokuapp.com/booking/5");
 
-        response.prettyPrint();
+     //   response.prettyPrint();
         response.then().assertThat().statusCode(200).contentType(ContentType.JSON);
         response.then().assertThat()
                 .body("firstname", Matchers.equalTo("Eric")
