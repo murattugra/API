@@ -81,7 +81,25 @@ public class PR23TestData extends DummyBaseUrl {
         Assert.assertTrue(butunYaslar.containsAll((Collection<?>) expectedData.get("yaslar")));
 
 
+        //   10. Çalışan bilgilerinin bilgilerinin aşağıdaki gibi
+        //   {
+        //           "id": 10,
+        //           "employee_name": "Sonya Frost",
+        //           "employee_salary": 103600,
+        //           "employee_age": 23,
+        //           "profile_image": ""
+        //    }
 
+
+        HashMap<String,Object> onuncuCalisanMap= (HashMap<String, Object>) expectedData.get("onuncuCalisan");
+
+      //  System.out.println(onuncuCalisanMap);
+
+        Assert.assertEquals(onuncuCalisanMap.get("id"),((HashMap)((List<?>) actualData.get("data")).get(9)).get("id"));
+        Assert.assertEquals(onuncuCalisanMap.get("employee_name"),((HashMap)((List<?>) actualData.get("data")).get(9)).get("employee_name"));
+        Assert.assertEquals(onuncuCalisanMap.get("employee_salary"),((HashMap)((List<?>) actualData.get("data")).get(9)).get("employee_salary"));
+        Assert.assertEquals(onuncuCalisanMap.get("employee_age"),((HashMap)((List<?>) actualData.get("data")).get(9)).get("employee_age"));
+        Assert.assertEquals(onuncuCalisanMap.get("profile_image"),((HashMap)((List<?>) actualData.get("data")).get(9)).get("profile_image"));
     }
 
 
