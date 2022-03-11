@@ -21,9 +21,9 @@ public class API1GetAllProductsList extends AutomationExcerciseUrl {
     @Test
     public void aut01(){
 
-        spec05.pathParams("first","productsList");
+        spec06.pathParams("first","productsList");
 
-        Response response=given().spec(spec05).when().get("/{first}");
+        Response response=given().spec(spec06).when().get("/{first}");
 
 
         response.prettyPrint();
