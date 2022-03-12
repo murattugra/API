@@ -54,6 +54,22 @@ public class JsonPlaceHolderTestData {
 
     }
 
+    public JSONObject request02(){
+        //"userId": 21,
+        //    "id": 201,
+        //    "title": "Tidy your room",
+        //    "completed": false
+
+        JSONObject request=new JSONObject();
+        request.put("userId",21);
+        request.put("id",201);
+        request.put("title","Tidy your room");
+        request.put("completed",false);
+
+
+        return request;
+    }
+
 
 
 }

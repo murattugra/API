@@ -56,6 +56,8 @@ public class PostRequest03 extends JsonPlaceHolderBaseUrl {
                 .post("/{bir}");
         response.prettyPrint();
 
+        Response response1=RestAssured.given().spec(spec04).get("/{bir}");
+        response1.prettyPrint();
 
         //DOGRULAMA
 
