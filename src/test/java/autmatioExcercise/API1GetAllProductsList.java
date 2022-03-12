@@ -1,6 +1,7 @@
 package autmatioExcercise;
 
 import base_url.AutomationExcerciseUrl;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -23,8 +24,8 @@ public class API1GetAllProductsList extends AutomationExcerciseUrl {
 
         spec06.pathParams("first","productsList");
 
-        Response response=given().spec(spec06).when().get("/{first}");
-
+        Response response=given().contentType(ContentType.JSON).spec(spec06).when().get("/{first}");
+        // Bu sitede JSOn path ile donmuyor sanirim site sadece HTML veriyor
 
         response.prettyPrint();
 

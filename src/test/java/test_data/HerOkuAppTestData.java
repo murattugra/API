@@ -45,7 +45,7 @@ public class HerOkuAppTestData {
 
         JSONObject expextedRequest= new JSONObject();
 
-        expextedRequest.put("firstname","Ali");
+        expextedRequest.put("firstname","Murat");
         expextedRequest.put("lastname","Can");
         expextedRequest.put("totalprice",500);
         expextedRequest.put("depositpaid",true);
@@ -53,6 +53,8 @@ public class HerOkuAppTestData {
 
 
         return expextedRequest;
+
+
     }
 
 

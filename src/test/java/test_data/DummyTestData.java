@@ -1,5 +1,7 @@
 package test_data;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,6 +59,46 @@ public class DummyTestData {
         expectedData.put("onuncucalisan", onuncu);
         return expectedData;
     }
+
+    public JSONObject setUpTestAndRequestData(){
+
+        //
+        //       "name":"Ali Can",
+        //       "salary":"2000",
+        //       "age":"40",
+
+
+        JSONObject requestBody=new JSONObject();
+
+        requestBody.put("name","ALi");
+        requestBody.put("salary",2000);
+        requestBody.put("age",40);
+
+        return requestBody;
+
+    }
+
+    //  gönderildiğinde,Status kodun 200 olduğunu ve dönen response body nin,
+    //   {
+    //       "status": "success",
+    //       "data": {
+    //       “id”:…
+    //   },
+    //       "message": "Successfully! Record has been added."
+    public JSONObject expectedRequest(){
+
+        JSONObject expectedRequest=new JSONObject();
+
+
+        expectedRequest.put("statusCode",200);
+        expectedRequest.put("status","success");
+        expectedRequest.put("message","Successfully! Record has been added.");
+
+        return expectedRequest;
+    }
+
+
+
 }
 
 
