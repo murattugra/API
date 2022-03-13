@@ -46,7 +46,7 @@ public class PostRequest04 extends JsonPlaceHolderBaseUrl {
         Response response= RestAssured.given().contentType(ContentType.JSON).spec(spec04).body(expectedData.toString()).post("/{parameter}");
         response.prettyPrint();
 
-
+     
 
         //Status kodun 201, response body ‘nin ise
         //    {
